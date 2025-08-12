@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/models/categorization.py">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/models/categorization.py" />
+              <option name="originalContent" value="CATEGORIES_KEYWORDS = {&#10;    &quot;alimentacao&quot;: [&quot;restaurante&quot;, &quot;lanche&quot;, &quot;pizza&quot;, &quot;delivery&quot;, &quot;ifood&quot;, &quot;burger&quot;, &quot;açai&quot;],&#10;    &quot;transporte&quot;: [&quot;uber&quot;, &quot;gasolina&quot;, &quot;estacionamento&quot;, &quot;onibus&quot;, &quot;metro&quot;, &quot;taxi&quot;],&#10;    &quot;entretenimento&quot;: [&quot;cinema&quot;, &quot;show&quot;, &quot;netflix&quot;, &quot;spotify&quot;, &quot;jogo&quot;, &quot;teatro&quot;],&#10;    &quot;compras&quot;: [&quot;loja&quot;, &quot;shopping&quot;, &quot;mercado&quot;, &quot;supermercado&quot;, &quot;farmacia&quot;],&#10;    &quot;casa&quot;: [&quot;luz&quot;, &quot;agua&quot;, &quot;gas&quot;, &quot;aluguel&quot;, &quot;condominio&quot;, &quot;internet&quot;]&#10;}&#10;&#10;def classificar_despesa(descricao):&#10;    descricao_lower = descricao.lower()&#10;    for categoria, keywords in CATEGORIES_KEYWORDS.items():&#10;        if any(keyword in descricao_lower for keyword in keywords):&#10;            return categoria&#10;    return &quot;outros&quot;" />
+              <option name="updatedContent" value="# Dicionário de palavras-chave para categorização automática de despesas&#13;&#10;CATEGORY_KEYWORDS = {&#13;&#10;    &quot;alimentacao&quot;: [&quot;restaurante&quot;, &quot;lanche&quot;, &quot;pizza&quot;, &quot;delivery&quot;, &quot;ifood&quot;, &quot;burger&quot;, &quot;açai&quot;],&#13;&#10;    &quot;transporte&quot;: [&quot;uber&quot;, &quot;gasolina&quot;, &quot;estacionamento&quot;, &quot;onibus&quot;, &quot;metro&quot;, &quot;taxi&quot;],&#13;&#10;    &quot;entretenimento&quot;: [&quot;cinema&quot;, &quot;show&quot;, &quot;netflix&quot;, &quot;spotify&quot;, &quot;jogo&quot;, &quot;teatro&quot;],&#13;&#10;    &quot;compras&quot;: [&quot;loja&quot;, &quot;shopping&quot;, &quot;mercado&quot;, &quot;supermercado&quot;, &quot;farmacia&quot;],&#13;&#10;    &quot;casa&quot;: [&quot;luz&quot;, &quot;agua&quot;, &quot;gas&quot;, &quot;aluguel&quot;, &quot;condominio&quot;, &quot;internet&quot;]&#13;&#10;}&#13;&#10;&#13;&#10;def classify_expense(description):&#13;&#10;    &quot;&quot;&quot;&#13;&#10;    Classifica uma despesa baseada na descrição fornecida.&#13;&#10;    &#13;&#10;    Args:&#13;&#10;        description: Descrição da despesa a ser classificada&#13;&#10;        &#13;&#10;    Returns:&#13;&#10;        Categoria da despesa ou &quot;outros&quot; se não encontrar correspondência&#13;&#10;    &quot;&quot;&quot;&#13;&#10;    description_lower = description.lower()&#13;&#10;    for category, keywords in CATEGORY_KEYWORDS.items():&#13;&#10;        if any(keyword in description_lower for keyword in keywords):&#13;&#10;            return category&#13;&#10;    return &quot;outros&quot;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/models/insights.py">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/models/insights.py" />
+              <option name="originalContent" value="# Lógica simples em Python/FastAPI&#10;def analisar_gastos_categoria(user_id, periodo_dias=30):&#10;    gastos_por_categoria = query_gastos_por_categoria(user_id, periodo_dias)&#10;    total = sum(gastos_por_categoria.values())&#10;&#10;    sugestoes = []&#10;    for categoria, valor in gastos_por_categoria.items():&#10;        percentual = (valor / total) * 100&#10;        if percentual &gt; 40:  # Threshold configurável&#10;            sugestoes.append(f&quot;Você gastou {percentual:.0f}% com {categoria}&quot;)&#10;&#10;    return sugestoes&#10;" />
+              <option name="updatedContent" value="# Lógica para análise de insights financeiros em Python/FastAPI&#10;def analyze_category_expenses(user_id, period_days=30):&#10;    &quot;&quot;&quot;&#10;    Analisa os gastos por categoria do usuário e retorna sugestões.&#10;    &#10;    Args:&#10;        user_id: ID do usuário&#10;        period_days: Período em dias para análise (padrão: 30 dias)&#10;    &#10;    Returns:&#10;        Lista de sugestões baseadas nos gastos por categoria&#10;    &quot;&quot;&quot;&#10;    expenses_by_category = query_gastos_por_categoria(user_id, period_days)&#10;    total = sum(expenses_by_category.values())&#10;&#10;    suggestions = []&#10;    for category, amount in expenses_by_category.items():&#10;        percentage = (amount / total) * 100&#10;        if percentage &gt; 40:  # Threshold configurável&#10;            suggestions.append(f&quot;Você gastou {percentage:.0f}% com {category}&quot;)&#10;&#10;    return suggestions" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
