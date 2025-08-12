@@ -4,18 +4,19 @@ CATEGORY_KEYWORDS = {
     "transporte": ["uber", "gasolina", "estacionamento", "onibus", "metro", "taxi"],
     "entretenimento": ["cinema", "show", "netflix", "spotify", "jogo", "teatro"],
     "compras": ["loja", "shopping", "mercado", "supermercado", "farmacia"],
-    "casa": ["luz", "agua", "gas", "aluguel", "condominio", "internet"]
+    "casa": ["luz", "agua", "gas", "aluguel", "condominio", "internet"],
 }
+
 
 def classify_expense(description):
     """
     Classifica uma despesa baseada na descrição fornecida.
 
     Args:
-        description: Descrição da despesa a ser classificada
+        description (str): Descrição da despesa a ser classificada.
 
     Returns:
-        Categoria da despesa ou "outros" se não encontrar correspondência
+        str: Categoria da despesa ou "outros" se não encontrar correspondência.
     """
     description_lower = description.lower()
     for category, keywords in CATEGORY_KEYWORDS.items():
