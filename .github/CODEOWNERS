@@ -1,5 +1,2 @@
-# Responsável pelo arquivo de configuração geral
-/config.yml  @Alan-oliveir
-
-# Responsável por todo o repositório (fallback)
-*           @Alan-oliveir
+# Responsável pelo repositório
+* @Alan-oliveir
